@@ -59,8 +59,7 @@ projeto_veiculos/
 │
 ├─ estilo.css              # Estilos gerais do sistema
 └─ README.md               # Documentação do projeto
-'''text
-
+```
 
 
 # Funcionalidades
