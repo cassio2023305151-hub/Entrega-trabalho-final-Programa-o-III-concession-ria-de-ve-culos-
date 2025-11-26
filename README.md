@@ -22,4 +22,16 @@ Este projeto é um sistema concessionária de veículos desenvolvido para fins e
 
 -Execute o script SQL contido no arquivo  bd.txt  para criar as tabelas e o usuário administrador.
 
+##  Configurar conexão
+-Abra o arquivo conecta.php.
+
+-Verifique se as credenciais ($host, $user, $pass, $dbname) correspondem ao seu ambiente local (XAMPP/WAMP geralmente usam root e senha vazia).
+
+## Permissões
+-Certifique-se de que existe uma pasta chamada uploads/ na raiz do projeto.
+
+-Garanta que essa pasta tenha permissão de escrita para salvar as imagens dos veículos.
+
+# Estrutura do projeto
+
 
