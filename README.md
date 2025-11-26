@@ -34,6 +34,7 @@ Este projeto é um sistema concessionária de veículos desenvolvido para fins e
 
 # Estrutura do projeto
 
+```text
 projeto_veiculos/
 │
 ├─ uploads/                # Pasta onde as imagens dos veículos são salvas
