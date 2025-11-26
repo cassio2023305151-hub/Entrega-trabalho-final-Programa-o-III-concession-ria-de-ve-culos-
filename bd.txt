@@ -1,0 +1,54 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS veiculos;
+
+-- Seleciona o banco de dados
+USE veiculos;
+
+-- Criação da tabela (COM A COLUNA 'imagem' ADICIONADA)
+-- Adicionamos 'imagem VARCHAR(255) NULL'
+-- NULL significa que o campo é opcional (o veículo pode ser cadastrado sem imagem)
+CREATE TABLE IF NOT EXISTS veiculos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR(100) NOT NULL,
+    marca VARCHAR(100) NOT NULL,
+    ano INT NOT NULL,
+    imagem VARCHAR(255) NULL 
+);
+
+-- Cria a tabela de usuários
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
+
+-- Insere um usuário de teste
+-- Email: admin@teste.com
+-- Senha: 123 (a string abaixo é o hash criptografado de '123')
+INSERT INTO usuarios (email, senha) VALUES 
+('admin@teste.com', '$2y$10$tM2s8XFz/g8e.jCqC/gOZOj.5wXzQyKj.g/5.y5.y5.y5.y5.y5');
+
+-- Inserção de alguns registros exemplo (COM A COLUNA 'imagem')
+-- Adicionamos a coluna 'imagem' na lista de colunas
+-- Adicionamos 'NULL' como valor para ela, já que são dados de exemplo.
+INSERT INTO veiculos (id, modelo, marca, ano, imagem) VALUES
+(1, "Uno", 'Fiat' , 1990, NULL),
+(2, "Fusca", "Volkswagen", 1980, NULL),
+(3, "Gol", "Volkswagen", 2000, NULL),
+(4, "Civic", "Honda", 2005, NULL),
+(5, "Corolla", "Toyota", 2010, NULL),
+(6, "Palio", "Fiat", 2003, NULL),
+(7, "Fox", "Volkswagen", 2012, NULL),
+(8, "Ka", "Ford", 2015, NULL),
+(9, "Sandero", "Renault", 2016, NULL),
+(10, "Astra", "Chevrolet", 2008, NULL),
+(11, "Fit", "Honda", 2014, NULL),
+(12, "HB20", "Hyundai", 2017, NULL),
+(13, "Punto", "Fiat", 2011, NULL),
+(14, "Onix", "Chevrolet", 2019, NULL),
+(15, "Tucson", "Hyundai", 2013, NULL),
+(16, "S10", "Chevrolet", 2016, NULL),
+(17, "Strada", "Fiat", 2006, NULL),
+(18, "Voyage", "Volkswagen", 2011, NULL),
+(19, "Tracker", "Chevrolet", 2020, NULL),
+(20, "Compass", "Jeep", 2021, NULL);
